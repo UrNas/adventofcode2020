@@ -23,19 +23,19 @@ func main() {
 		numbers = append(numbers, n)
 	}
 	for _, v := range numbers {
-		n, ok := isTotal2010(numbers, v)
+		n, ok := isTotal2020(numbers, v)
 		if ok {
 			fmt.Println(n)
 		}
 	}
 	for _, v := range numbers {
-		n, ok := isTotalThree2010(numbers, v)
+		n, ok := isTotalThree2020(numbers, v)
 		if ok {
 			fmt.Println(n)
 		}
 	}
 }
-func isTotal2010(list []int, n int) (int, bool) {
+func isTotal2020(list []int, n int) (int, bool) {
 	for _, v := range list {
 		if (n + v) == 2020 {
 			return (n * v), true
@@ -43,7 +43,7 @@ func isTotal2010(list []int, n int) (int, bool) {
 	}
 	return 0, false
 }
-func isTotalThree2010(list []int, n int) (int, bool) {
+func isTotalThree2020(list []int, n int) (int, bool) {
 	var product []int
 	var total int
 	for i, v := range list {
